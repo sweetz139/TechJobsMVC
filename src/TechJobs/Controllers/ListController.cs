@@ -38,7 +38,7 @@ namespace TechJobs.Controllers
             }
             else
             {
-                List<string> items = JobData.FindAll(column);
+                IList<string> items = JobData.FindAll(column);
                 ViewBag.title =  "All " + columnChoices[column] + " Values";
                 ViewBag.column = column;
                 ViewBag.items = items;

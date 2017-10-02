@@ -51,6 +51,11 @@ namespace TechJobs.Models
             // load data, if not already loaded
             LoadData();
 
+            if (value == null)
+            {
+                value = "";
+            }
+
             List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
 
             foreach (Dictionary<string, string> row in AllJobs)

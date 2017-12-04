@@ -32,5 +32,23 @@
 
     <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-    // TODO #2 - Loop over jobs dictionary and display all job fields 
+    // TODO #2 - Loop over jobs dictionary and display all job fields
+        @for (int i = 0; i < ViewBag.jobs.Count; i++)
+        {
+            <table bordercolor="lightblue" width="100%">
+            @foreach (KeyValuePair<string, string> job in ViewBag.jobs[i])
+            {
+                    <tr class="@( i % 2 == 0 ? "even" : "odd" ) ">
+                        <td align="left" width="50%"><b>@job.Key</b></td>
+                        <td align="left">@job.Value</td>
+                    </tr>
+                    
+
+            }
+            </table>
+            <br/>
+            <br/>
+        }
+
+
 }
